@@ -24,3 +24,41 @@
   margin-left: auto;
   padding-right: 10px;
 }
+
+
+.Meme{
+  margin-left: 30px;
+}
+.Meme--button {
+  height: 40px;
+  width: 477px;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  border-radius: 5px;
+  font-family: 'Karla';
+  font-weight: 700;
+font-size: 16px;
+color: #FFFFFF;
+margin-top: 15px;
+border: none;
+cursor: pointer;
+}
+
+.Meme--form {
+  width: 230px;
+  height: 35px;
+  display: flex;
+  margin-top: 30px;
+  border: 1px solid #D5D4D8;
+border-radius: 5px;
+box-sizing: border-box;
+
+}
+.Meme--button2{
+  margin-left: 38px;
+}
+.Meme--image{
+  width: 477px;
+  height: 268px;
+  margin-top: 20px;
+border-radius: 2px;
+}
