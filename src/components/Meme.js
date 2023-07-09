@@ -1,8 +1,30 @@
-import Arraydata from '../MemesData';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
+    /**
+     * Challenge: 
+     * As soon as the Meme component loads the first time,
+     * make an API call to "https://api.imgflip.com/get_memes".
+     * 
+     * When the data comes in, save just the memes array part
+     * of that data to the `allMemes` state
+     * 
+     * Think about if there are any dependencies that, if they
+     * changed, you'd want to cause to re-run this function.
+     * 
+     * Hint: for now, don't try to use an async/await function.
+     * Instead, use `.then()` blocks to resolve the promises
+     * from using `fetch`. We'll learn why after this challenge.
+     */
 function Meme() {
-    const [allMemeImages, setAllMemeImages] = useState(Arraydata)
+    useEffect(() =>{
+        let url = "https://api.imgflip.com/get_memes";
+        fetch(url)
+        .then( response => response.json())
+        .then(data => setAllMemeImages(data))
+    }, [])
+   
+    const [allMemeImages, setAllMemeImages] = useState({})
     function getimage() {
         let image = allMemeImages.data.memes[(Math.floor(Math.random() * allMemeImages.data.memes.length))];
         setMeme(prevImage => {
